@@ -1,0 +1,68 @@
+@extends('layouts.admin')
+
+@section('content')
+@php
+    use App\Models\admin\Admin;
+@endphp
+<div class="col-xl-12 col-md-12">
+      <div class="ms-panel-header ms-panel-custome">
+         <h6>VIEW all Roles </h6>
+          
+          <a href="manage_role" class="ms-text-primary">Back</a>
+      </div>
+      <div class="ms-panel-body">
+         <div class="table-responsive">
+            <table id="example" class="table table-striped thead-primary w-100">
+
+	<thead>
+		<tr>
+			<th>SN</th>
+            <th>ROLE</th>
+			<th>STATUS</th>
+		</tr>
+	</thead>
+
+	<tbody>
+			<?php
+        //  $no_id = 1;
+        //  $url = $_SERVER['REQUEST_URI'];
+        //  $date_year = explode('&&', $url);
+        //  // echo $date_year[1];
+        //  $resultset = $Fcall->fetch_table_only('roles');
+        //     if (!empty($resultset)) {
+
+        //        foreach ($resultset as $k => $v) { 
+
+
+                  ?>
+                       <tr>
+                       <td scope="row"><?php //echo $no_id++ ?></td>
+                       <td><?php //echo $resultset[$k]['name']; ?></td>
+                       
+                       <td><b>
+
+                        <?php
+
+                        //    if($resultset[$k]['status'] == "Active"){
+
+                        //        echo '<span class="badge badge-success p-2">'.$resultset[$k]['status'].'</span>';
+
+                        //    }else{
+
+                        //       echo '<span class="badge badge-warning p-2">'.$resultset[$k]['status'].'</span>';
+
+                        //    }
+
+                        ?>
+                        </b></td>
+                       </tr>
+               <?php
+                //     }
+                // }
+            ?>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+@endsection
