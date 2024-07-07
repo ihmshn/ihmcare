@@ -13,4 +13,10 @@ class HMOController extends Controller
     {
         return view('hmo_officer.dashboard');
     }
+
+
+
+
+
+
 }

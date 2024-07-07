@@ -10,15 +10,14 @@
         <a href="" onclick="window.close();" class="ms-text-primary"><i class="fas fa-times" style="font-size: larger;"></i> Close </a>
     </div>
     <div class="ms-panel-body">
-        @php  
-            $bill_id = request()->get('details');
-            $GetData = DB::table('mortuary_bill')->where('bill_id', $bill_id)->first();
-            if ($GetData) {
-                $GetData1 = DB::table('corpsedeposit')->where('case_id', $GetData->corpse_id)->first();
-                $bal = $GetData->total_amount - $GetData->amount_paid;
-            }
-        @endphp
-        @if ($GetData)
+                @php  
+                if (isset($bill)) {
+                    $GetData = $bill;  // The bill data passed from the controller
+                    $GetData1 = DB::table('corpsedeposit')->where('case_id', $GetData->corpse_id)->first();
+                    $bal = $GetData->total_amount - $GetData->amount_paid;
+                }
+            @endphp
+            @if ($GetData)
         <div class="row">
             <div class="col-lg-12">
                 <div class="card shadow mb-4">
@@ -149,7 +148,18 @@
                                         </tr>
                                     </thead>
                                     <tbody style="background-color:#E2FFEF; color:#2BC06E;">
-                   
+                                        @php
+                                            $no_id = 1;
+                                            $resultset = DB::table('bill_payment_log')->where('reference_id', $GetData->corpse_id)->get();
+                                        @endphp
+                                        @foreach($resultset as $payment)
+                                            <tr>
+                                                <td scope="row">{{ $no_id++ }}</td>
+                                                <td>{{ $payment->bill_description }}</td>
+                                                <td>{{ number_format($payment->total) }}</td>
+                                                <td>{{ $payment->payment_date }}</td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -185,7 +195,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="validationCustom002">Bill Description</label>
                                         <div class="input-group">
-                                            <input type="hidden" name="corpse_id" value="">
+                                            <input type="hidden" name="corpse_id" value="{{ $GetData->corpse_id }}">
                                             <textarea rows="2" class="form-control" name="bill_description"></textarea>
                                         </div>
                                     </div>
@@ -242,7 +252,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="validationCustom002">Payment Description</label>
                                         <div class="input-group">
-                                            <input type="hidden" name="corpse_id" value="">
+                                            <input type="hidden" name="corpse_id" value="{{ $GetData->corpse_id }}">
                                             <textarea rows="2" class="form-control" name="bill_description"></textarea>
                                         </div>
                                     </div>
@@ -265,4 +275,6 @@
         </div>
     </div>
 </div>
+
+
 @endsection

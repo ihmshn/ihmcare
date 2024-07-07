@@ -77,32 +77,32 @@
       <!-- Dashboard -->
 
       <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/mortuary/dashboard" style="background-color: #033DBB !important;">
           <span><i class="fas  fa-heart text-danger"></i>Mortuary Portal</span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="corpse_deposit">
+        <a href="/mortuary/corpse_deposit">
            <span><i class="fas fa-arrow-circle-right"></i>Corpse Deposit</span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="corpse_record">
+        <a href="/mortuary/corpse_record">
           <span><i class="fas fa-arrow-circle-right"></i>Corpse Records</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="mortuary_bill">
+        <a href="/mortuary/mortuary_bill">
            <span><i class="fas fa-arrow-circle-right"></i>Mortuary Bill</span>
         </a>
       </li>
 
      <!--  <li class="menu-item">
-        <a href="request_other_branches">
+        <a href="/mortuary/request_other_branches">
 
           
           <span><i class="fas fa-arrow-circle-right"></i>Contract Form</span>
@@ -110,110 +110,110 @@
       </li> -->
 <!-- 
       <li class="menu-item">
-        <a href="">
+        <a href="/mortuary/">
           <span><i class="fas  fa-arrow-circle-right"></i>Appointments</span>
         </a>
       </li> -->
 
 
       <li class="menu-item">
-        <a href="mortuary_price_list">
+        <a href="/mortuary/mortuary_price_list">
           <span><i class="fas fa-arrow-circle-right"></i>Mortuary Price List</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="mortuary_service">
+        <a href="/mortuary/mortuary_service">
           <span><i class="fas  fa-arrow-circle-right"></i>Services</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="ambulance_services">
+        <a href="/mortuary/ambulance_services">
           <span><i class="fas  fa-arrow-circle-right"></i>Ambulance Booking</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="booked_ambulance_service">
+        <a href="/mortuary/booked_ambulance_service">
           <span><i class="fas  fa-arrow-circle-right"></i>Booked Ambulance Service</span>
         </a>
       </li>
 
       <!-- <li class="menu-item">
-        <a href="ongoing_ambulance_service">
+        <a href="/mortuary/ongoing_ambulance_service">
           <span><i class="fas  fa-arrow-circle-right"></i>Ongoing Ambulance Service</span>
         </a>
       </li> -->
 
 
       <!-- <li class="menu-item">
-        <a href="ages/widgets.html">
+        <a href="/mortuary/ages/widgets.html">
           <span><i class="fas  fa-arrow-circle-right"></i>Invoicing</span>
         </a>
       </li>
 
 
         <li class="menu-item">
-        <a href="pages/widgets.html">
+        <a href="/mortuary/pages/widgets.html">
           <span><i class="fas  fa-arrow-circle-right"></i>Reciept</span>
         </a>
       </li> -->
 
 
     <!--   <li class="menu-item">
-        <a href="procurement_request">
+        <a href="/mortuary/procurement_request">
           <span><i class="fas  fa-arrow-circle-right"></i>Tasks</span>
         </a>
       </li>
 
 
        <li class="menu-item">
-        <a href="procurement_request">
+        <a href="/mortuary/procurement_request">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff</span>
         </a>
       </li> -->
 
 
       <li class="menu-item">
-        <a href="add_new_material">
+        <a href="/mortuary/add_new_material">
           <span><i class="fas  fa-arrow-circle-right"></i>Add New Material</span>
         </a>
       </li>
 
 
        <li class="menu-item">
-        <a href="view_material">
+        <a href="/mortuary/view_material">
           <span><i class="fas  fa-arrow-circle-right"></i>View Materials</span>
         </a>
       </li>
 
          <li class="menu-item">
-        <a href="edit_material">
+        <a href="/mortuary/edit_material">
           <span><i class="fas  fa-arrow-circle-right"></i>Edit Materials</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="record_used_material">
+        <a href="/mortuary/record_used_material">
           <span><i class="fas  fa-arrow-circle-right"></i>Record Used Materials</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="view_used_material">
+        <a href="/mortuary/view_used_material">
           <span><i class="fas  fa-arrow-circle-right"></i>View Used Materials</span>
         </a>
       </li>
 
 
        <li class="menu-item">
-        <a href="item_request">
+        <a href="/mortuary/item_request">
           <span><i class="fas fa-arrow-circle-right"></i>Requests</span>
         </a>
       </li>

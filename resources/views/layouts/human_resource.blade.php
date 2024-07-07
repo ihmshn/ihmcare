@@ -36,6 +36,23 @@
     <script src="{{asset('assets/js/vfs_fonts.js') }}"></script>
     <script src="{{asset('sweetalert.min.js') }}"></script>
   
+    <style>
+      /* Default style for menu items */
+      .menu-item a {
+
+        background-color: #1877F2; /* Default background color */
+        color: #000; /* Default text color */
+
+      }
+
+      /* Style for the active menu item */
+      .menu-item.active a {
+
+        background-color: #2AB7FF !important; /* Active background color */
+        color: #fff; /* Active text color */
+        
+      }
+    </style>
   
 </head>
 <body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
@@ -78,7 +95,7 @@
 
      
       <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/human_resource/dashboard" style="background-color: #033DBB !important;">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-heart"></i>Staff Menu</span>
         </a>
@@ -86,44 +103,44 @@
 
 
       <li class="menu-item">
-        <a href="addstaff">
+        <a href="/human_resource/addstaff">
           <span><i class="fas fa-arrow-circle-right"></i>Add New Staff </span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="Staffphotocapture">
+        <a href="/human_resource/Staffphotocapture">
           <span><i class="fas fa-arrow-circle-right"></i>Staff Photo Capture</span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="Staffqualification">
+        <a href="/human_resource/Staffqualification">
           <span><i class="fas fa-arrow-circle-right"></i>Staff Qualifications</span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="Staffdependant">
+        <a href="/human_resource/Staffdependant">
           <span><i class="fas fa-arrow-circle-right"></i>Staff Dependant</span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="staffpromotion">
+        <a href="/human_resource/staffpromotion">
           <span><i class="fas fa-arrow-circle-right"></i>Staff Promotion</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Uploadstaffdocument">
+        <a href="/human_resource/Uploadstaffdocument">
           <span><i class="fas  fa-arrow-circle-right"></i>Upload Staff Document </span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="Addstaffreferees">
+        <a href="/human_resource/Addstaffreferees">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Staff Referees</span>
         </a>
       </li>
@@ -132,28 +149,28 @@
 
 
       <li class="menu-item">
-        <a href="staffnorminalroll">
+        <a href="/human_resource/staffnorminalroll">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas fa-arrow-circle-right"></i>Staff Norminal Roll</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Recruitment">
+        <a href="/human_resource/Recruitment">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Recruitment</span>
         </a>
       </li>
 
  <li class="menu-item">
-        <a href="Sessionplaning">
+        <a href="/human_resource/Sessionplaning">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Session planing</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Payroll">
+        <a href="/human_resource/Payroll">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Payroll</span>
         </a>
@@ -161,7 +178,7 @@
 
 
        <li class="menu-item">
-        <a href="Staffleave">
+        <a href="/human_resource/Staffleave">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Leave Entitlement</span>
         </a>
@@ -169,37 +186,29 @@
 
 
        <li class="menu-item">
-        <a href="Addleave_entitle">
+        <a href="/human_resource/Addleave_entitle">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i> Add Leave by Entitlement</span>
         </a>
       </li>
 
-
-
-    <!--    <li class="menu-item">
-        <a href="Setadvert">
-         
-          <span><i class="fas  fa-arrow-circle-right"></i>Set Advert</span>
-        </a>
-      </li>
- -->
        <li class="menu-item">
-        <a href="vpr">
+        <a href="/human_resource/personal_requst">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Personal Request(PER)</span>
         </a>
       </li>
 
+
        <li class="menu-item">
-        <a href="Employeeviewing">
+        <a href="/human_resource/Employeeviewing">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Employee Viewing</span>
         </a>
       </li>
 
         <li class="menu-item">
-        <a href="staffconfirmation">
+        <a href="/human_resource/staffconfirmation">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Confirmation</span>
         </a>
@@ -207,28 +216,28 @@
 
 
        <li class="menu-item">
-        <a href="Employmentconfirm">
+        <a href="/human_resource/Employmentconfirm">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Employment confirmation</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Unconfirmedstaff">
+        <a href="/human_resource/Unconfirmedstaff">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Unconfirmed Staffs</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Viewstaffdepartment">
+        <a href="/human_resource/Viewstaffdepartment">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas fa- fa-arrow-circle-right"></i>View Staff by Department</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Learningneedsaccessment">
+        <a href="/human_resource/Learningneedsaccessment">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>Learning Needs Accessment</span>
         </a>
@@ -236,7 +245,7 @@
 
     
          <li class="menu-item">
-        <a href="Viewstaffbydateofbirth">
+        <a href="/human_resource/Viewstaffbydateofbirth">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>View Staff By Date Of Birth</span>
         </a>
@@ -246,65 +255,65 @@
 
 
      <!--- <li class="menu-item">
-        <a href="cost_adjustment">
+        <a href="/human_resource/cost_adjustment">
           <span><i class="fas  fa-arrow-circle-right"></i>Check Patient Bill</span>
         </a>
       </li>
 
 
       <li class="menu-item">
-        <a href="pages/widgets.html">
+        <a href="/human_resource/pages/widgets.html">
           <span><i class="fas  fa-arrow-circle-right"></i>Discharged Consult</span>
         </a>
       </li>
 --->
 
   <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/human_resource/dashboard" style="background-color: #033DBB !important;">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-heart"></i>Hr Admin Menu</span>
         </a>
       </li>
 
           <li class="menu-item">
-        <a href="addtitle">
+        <a href="/human_resource/addtitle">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Staff title</span>
         </a>
       </li>
 
          <li class="menu-item">
-        <a href="AddStaffCategory">
+        <a href="/human_resource/AddStaffCategory">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Staff Category</span>
         </a>
       </li>
 
    <li class="menu-item">
-        <a href="Viewstaffbydateofemploy">
+        <a href="/human_resource/Viewstaffbydateofemploy">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-arrow-circle-right"></i>View Staff By Date Of Employment</span>
         </a>
 
          <li class="menu-item">
-        <a href="StaffDesignation">
+        <a href="/human_resource/StaffDesignation">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Designation</span>
         </a>
       </li>
 
    <li class="menu-item">
-        <a href="StaffGradeLevel">
+        <a href="/human_resource/StaffGradeLevel">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Grade Level</span>
         </a>
       </li>
 
 
    <li class="menu-item">
-        <a href="Staff_finacial">
+        <a href="/human_resource/Staff_finacial">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Financial Info</span>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="Staffsuspension">
+        <a href="/human_resource/Staffsuspension">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Suspension</span>
         </a>
       </li>
@@ -312,58 +321,58 @@
 
     
    <li class="menu-item">
-        <a href="AddGroup">
+        <a href="/human_resource/AddGroup">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Group</span>
         </a>
       </li>
     <li class="menu-item">
-        <a href="Addleavetype">
+        <a href="/human_resource/Addleavetype">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Leave Type</span>
         </a>
       </li>
          <li class="menu-item">
-        <a href="Addholiday">
+        <a href="/human_resource/Addholiday">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Public Holiday</span>
         </a>
       </li>
            <li class="menu-item">
-        <a href="publicholiday">
+        <a href="/human_resource/publicholiday">
           <span><i class="fas  fa-arrow-circle-right"></i>View Public holiday</span>
         </a>
       </li>
       
         <li class="menu-item">
-        <a href="Dismissedstaff">
+        <a href="/human_resource/Dismissedstaff">
           <span><i class="fas  fa-arrow-circle-right"></i>Dismissed Staff</span>
         </a>
       </li>
 
          <li class="menu-item">
-        <a href="Add_doctor">
+        <a href="/human_resource/Add_doctor">
           <span><i class="fas  fa-arrow-circle-right"></i>Add Doctor</span>
         </a>
       </li>
 
         <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/human_resource/dashboard" style="background-color: #033DBB !important;">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-heart"></i>Request Menu</span>
         </a>
 </li>
          <li class="menu-item">
-        <a href="Item_requisition">
+        <a href="/human_resource/Item_requisition">
           <span><i class="fas  fa-arrow-circle-right"></i>Item Requisition</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Expense_request">
+        <a href="/human_resource/Expense_request">
           <span><i class="fas  fa-arrow-circle-right"></i>Expense Request</span>
         </a>
       </li>
 
        <li class="menu-item">
-        <a href="Expense_review">
+        <a href="/human_resource/Expense_review">
           <span><i class="fas  fa-arrow-circle-right"></i>Expense Review</span>
         </a>
       </li>
@@ -371,13 +380,13 @@
        
 
        <li class="menu-item">
-        <a href="pages/widgets.html">
+        <a href="/human_resource/pages/widgets.html">
           <span><i class="fas  fa-arrow-circle-right"></i>Confirmation Aporasal</span>
         </a>
       </li>
 
             <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/human_resource/dashboard" style="background-color: #033DBB !important;">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</
 
             span> -->
@@ -387,110 +396,110 @@
 
      
 <!--            <li class="menu-item">
-        <a href="page\widgets.html">
+        <a href="/human_resource/page\widgets.html">
           <span><i class="fas  fa-arrow-circle-right"></i>Mail Settings</span>
         </a>
 </li> -->
            <li class="menu-item">
-        <a href="payrollsetup">
+        <a href="/human_resource/payrollsetup">
           <span><i class="fas  fa-arrow-circle-right"></i>Payroll Setup</span>
         </a>
 </li>
 
            <li class="menu-item">
-        <a href="payrollprep">
+        <a href="/human_resource/payrollprep">
           <span><i class="fas  fa-arrow-circle-right"></i>Payroll Prep</span>
         </a>
 </li>
 
            <li class="menu-item">
-        <a href="payroll_review">
+        <a href="/human_resource/payroll_review">
           <span><i class="fas  fa-arrow-circle-right"></i>Payroll review</span>
         </a>
 </li>
 
            <li class="menu-item">
-        <a href="">
+        <a href="/human_resource/">
           <span><i class="fas  fa-arrow-circle-right"></i>PaySlip Generate</span>
         </a>
 </li>
                    <li class="menu-item">
-        <a href="editstaff">
+        <a href="/human_resource/editstaff">
           <span><i class="fas  fa-arrow-circle-right"></i>Edit Staff Record</span>
         </a>
 </li>
 
           <!-- <li class="menu-item">
-        <a href="manageconfirmstaff">
+        <a href="/human_resource/manageconfirmstaff">
           <span><i class="fas  fa-arrow-circle-right"></i>Manage Confirm Staff</span>
         </a>
 </li>-->
 
            <li class="menu-item">
-        <a href="staffbirthday">
+        <a href="/human_resource/staffbirthday">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Birthday list</span>
         </a>
 </li>
 
 
 <!--            <li class="menu-item">
-        <a href="transfer">
+        <a href="/human_resource/transfer">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Transfer</span>
         </a>
 </li>
  -->
   
   <!-- <li class="menu-item">
-        <a href="stafflist">
+        <a href="/human_resource/stafflist">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Listing</span>
         </a>
 </li>-->
 
    <li class="menu-item">
-        <a href="Employeeviewing">
+        <a href="/human_resource/Employeeviewing">
           <span><i class="fas  fa-arrow-circle-right"></i>List Employee</span>
         </a>
 </li>
 
    <li class="menu-item">
-        <a href="Dismissedstaff">
+        <a href="/human_resource/Dismissedstaff">
           <span><i class="fas  fa-arrow-circle-right"></i>List of Dismissed Staff</span>
         </a>
 </li>
    <li class="menu-item">
-        <a href="staffleaveallowance">
+        <a href="/human_resource/staffleaveallowance">
           <span><i class="fas  fa-arrow-circle-right"></i>Staff Leave Allowance</span>
         </a>
 </li>
 
 
     <!--        <li class="menu-item">
-        <a href="managequery">
+        <a href="/human_resource/managequery">
           <span><i class="fas  fa-arrow-circle-right"></i>Manage Query</span>
         </a>
 </li> -->
 
            <li class="menu-item">
-        <a href="managesuspension">
+        <a href="/human_resource/managesuspension">
           <span><i class="fas  fa-arrow-circle-right"></i>Manage Suspension</span>
         </a>
 </li>
 
            <li class="menu-item">
-        <a href="managepromotion">
+        <a href="/human_resource/managepromotion">
           <span><i class="fas  fa-arrow-circle-right"></i>Manage Promotion</span>
         </a>
 </li>
 
-           <li class="menu-item">
-        <a href="managebank">
+<li class="menu-item">
+        <a href="/human_resource/managebank">
           <span><i class="fas  fa-arrow-circle-right"></i>Manage Bank</span>
         </a>
 </li>
 
 
  <!--            <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/human_resource/dashboard" style="background-color: #033DBB !important;">
          
           <span><i class="fas  fa-heart"></i>NOTIFICATION</span>
         </a>
@@ -498,14 +507,14 @@
 
 
      <li class="menu-item">
-        <a href="pages/widgets.html">
+        <a href="/human_resource/pages/widgets.html">
           <span><i class="fas  fa-arrow-circle-right"></i>Send Upgrade Notice</span>
         </a>
 </li> -->
 
 
             <li class="menu-item">
-        <a href="dashboard" style="background-color: #033DBB !important;">
+        <a href="/human_resource/dashboard" style="background-color: #033DBB !important;">
           <!-- <span><i class="material-icons fs-16">widgets</i>Widgets</span> -->
           <span><i class="fas  fa-heart"></i>Report Menu</span>
         </a>
@@ -513,7 +522,7 @@
 
 
        <li class="menu-item">
-        <a href="dashboard">
+        <a href="/human_resource/dashboard">
           <span><i class="fas  fa-arrow-circle-right"></i>Leave Dashboard</span>
         </a>
       </li>

@@ -30,9 +30,17 @@ use App\Http\Controllers\blood_bank\BloodbankController;
 use App\Http\Controllers\dailysis_unit\DailysisUnitController;
 
 
+///Ajax
+use App\Http\Controllers\mortuary\ajaxController;
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 Route::prefix('admin')->group(function () {
 
@@ -232,6 +240,43 @@ Route::prefix('hmo_officer')->group(function () {
 Route::prefix('human_resource')->group(function () {
 
     Route::get('/dashboard', [HRController::class, 'dashboard'])->name('human_resource.dashboard');
+    // routes/web.php
+    Route::get('/addstaff', [HRController::class, 'addstaff'])->name('human_resource.addstaff');
+    // Route::post('/add-hospital-staff', [HRController::class, 'store'])->name('staff.store');
+    // Route::get('/staff-list', [HRController::class, 'index'])->name('staff.index');
+
+    Route::get('/Staffphotocapture', [HRController::class, 'Staffphotocapture'])->name('human_resource.Staffphotocapture');
+
+    Route::get('/Staffqualification', [HRController::class, 'Staffqualification'])->name('human_resource.Staffqualification');
+    Route::get('/Staffdependant', [HRController::class, 'Staffdependant'])->name('human_resource.Staffdependant');
+    Route::get('/Uploadstaffdocument', [HRController::class, 'Uploadstaffdocument'])->name('human_resource.Uploadstaffdocument');
+    Route::get('/Addstaffreferees', [HRController::class, 'Addstaffreferees'])->name('human_resource.Addstaffreferees');
+    Route::get('/staffnorminalroll', [HRController::class, 'staffnorminalroll'])->name('human_resource.staffnorminalroll');
+    Route::get('/Recruitment', [HRController::class, 'Recruitment'])->name('human_resource.Recruitment');
+    Route::get('/Sessionplaning', [HRController::class, 'Sessionplaning'])->name('human_resource.Sessionplaning');
+    Route::get('/Payroll', [HRController::class, 'Payroll'])->name('human_resource.Payroll');
+    Route::get('/Staffleave', [HRController::class, 'Staffleave'])->name('human_resource.Staffleave');
+    Route::get('/Addleave_entitle', [HRController::class, 'Addleave_entitle'])->name('human_resource.Addleave_entitle');
+    Route::get('/personal_requst', [HRController::class, 'personal_requst'])->name('human_resource.personal_requst');
+    Route::get('/Employeeviewing', [HRController::class, 'Employeeviewing'])->name('human_resource.Employeeviewing');
+    Route::get('/staffconfirmation', [HRController::class, 'staffconfirmation'])->name('human_resource.staffconfirmation');
+    Route::get('/addtitle', [HRController::class, 'addtitle'])->name('human_resource.addtitle');
+    Route::get('/Employmentconfirm', [HRController::class, 'Employmentconfirm'])->name('human_resource.Employmentconfirm');
+    Route::get('/Unconfirmedstaff', [HRController::class, 'Unconfirmedstaff'])->name('human_resource.Unconfirmedstaff');
+    Route::get('/Viewstaffdepartment', [HRController::class, 'Viewstaffdepartment'])->name('human_resource.Viewstaffdepartment');
+    Route::get('/Learningneedsaccessment', [HRController::class, 'Learningneedsaccessment'])->name('human_resource.Learningneedsaccessment');
+    Route::get('/Viewstaffbydateofbirth', [HRController::class, 'Viewstaffbydateofbirth'])->name('human_resource.Viewstaffbydateofbirth');
+    Route::get('/AddStaffCategory', [HRController::class, 'AddStaffCategory'])->name('human_resource.AddStaffCategory');
+    Route::get('/Viewstaffbydateofemploy', [HRController::class, 'Viewstaffbydateofemploy'])->name('human_resource.Viewstaffbydateofemploy');
+    Route::get('/StaffDesignation', [HRController::class, 'StaffDesignation'])->name('human_resource.StaffDesignation');
+    Route::get('/StaffGradeLevel', [HRController::class, 'StaffGradeLevel'])->name('human_resource.StaffGradeLevel');
+    Route::get('/Staff_finacial', [HRController::class, 'Staff_finacial'])->name('human_resource.Staff_finacial');
+    Route::get('/Staffsuspension', [HRController::class, 'Staffsuspension'])->name('human_resource.Staffsuspension');
+    Route::get('/AddGroup', [HRController::class, 'AddGroup'])->name('human_resource.AddGroup');
+    Route::get('/Addleavetype', [HRController::class, 'Addleavetype'])->name('human_resource.Addleavetype');
+    Route::get('/Addholiday', [HRController::class, 'Addholiday'])->name('human_resource.Addholiday');
+    Route::get('/publicholiday', [HRController::class, 'publicholiday'])->name('human_resource.publicholiday');
+    
     
 
 });
@@ -317,7 +362,6 @@ Route::prefix('radiology')->group(function () {
 
 });
 
-
 Route::prefix('mortuary')->group(function () {
 
     Route::get('/dashboard', [MortuaryController::class, 'dashboard'])->name('mortuary.dashboard');
@@ -333,10 +377,73 @@ Route::prefix('mortuary')->group(function () {
 
     // Route::get('/mortuary_bill', [MortuaryController::class, 'mortuary_bill'])->name('mortuary.mortuary_bill');
     Route::get('/mortuary_bill', [MortuaryController::class, 'showBills'])->name('mortuary.mortuary_bill');
-Route::get('/bill_details/{bill_id}', [MortuaryController::class, 'billDetails'])->name('mortuary.bill_details');
-Route::get('/mortuary_price_list/', [MortuaryController::class, 'mortuary_price_list'])->name('mortuary.mortuary_price_list');
-Route::get('/bill_details/{id}', [MortuaryController::class, 'billDetails'])->name('mortuary.bill_details');
 
+    Route::get('/bill_details/{bill_id}', [MortuaryController::class, 'billDetails'])->name('mortuary.bill_details');
+    Route::get('/mortuary_price_list/', [MortuaryController::class, 'mortuary_price_list'])->name('mortuary.mortuary_price_list');
+    Route::get('/edit_price_list/{id}', [MortuaryController::class, 'editPriceList'])->name('mortuary.edit_price_list');
+    Route::post('/edit_price_list/{id}', [MortuaryController::class, 'updatePriceList'])->name('mortuary.edit_price_list');
+
+    Route::get('/add_mortuary_price_list', [MortuaryController::class, 'add_mortuary_price_list'])->name('mortuary.add_mortuary_price_list');
+    Route::get('/ambulance_services', [MortuaryController::class, 'ambulance_services'])->name('mortuary.ambulance_services'); 
+    Route::get('/booked_ambulance_service', [MortuaryController::class, 'booked_ambulance_service'])->name('mortuary.booked_ambulance_service'); 
+    Route::get('/add_new_material', [MortuaryController::class, 'add_new_material'])->name('mortuary.add_new_material');
+    Route::get('/view_material', [MortuaryController::class, 'viewMaterials'])->name('mortuary.view_material');
+
+    Route::get('/mortuary/view_material_details/{id}', [MortuaryController::class, 'viewMaterialDetails'])->name('mortuary.view_material_details');
+
+    Route::get('/edit_material', [MortuaryController::class, 'editMaterials'])->name('mortuary.edit_material'); 
+
+    Route::get('/record_used_material', [MortuaryController::class, 'record_used_material'])->name('mortuary.record_used_material');
+    Route::get('/fetch-material-details/{id}', [MortuaryController::class, 'fetch_material_details'])->name('mortuary.fetch_material_details');
+    Route::post('/store-used-material', [MortuaryController::class, 'store_used_material'])->name('mortuary.store_used_material');
+
+    Route::get('/view_used_material', [MortuaryController::class, 'viewUsedMaterial'])->name('mortuary.view_used_material');
+    
+    Route::get('/view_used_material_details/{id}', [MortuaryController::class, 'viewUsedMaterialDetails'])->name('mortuary.view_used_material_details');
+
+    
+    Route::get('/mortuary_service', [MortuaryController::class, 'servicesList'])->name('mortuary.mortuary_service');  
+
+    Route::get('/add_services', [MortuaryController::class, 'addServiceForm'])->name('mortuary.add_services');
+    Route::post('/add_services', [MortuaryController::class, 'storeService'])->name('mortuary.store-service');
+    Route::get('/edit_service/{id}', [MortuaryController::class, 'editServiceForm'])->name('mortuary.edit_service');
+    Route::post('/update-service/{id}', [MortuaryController::class, 'updateService'])->name('mortuary.update-service');
+    Route::post('/delete-service/{id}', [MortuaryController::class, 'deleteService'])->name('mortuary.delete-service');
+
+    Route::get('/ambulance_services', [MortuaryController::class, 'ambulanceServices'])->name('mortuary.ambulance_services');
+    Route::get('/add_ambulance_service', [MortuaryController::class, 'addAmbulanceServiceForm'])->name('mortuary.add_ambulance_service');
+    Route::post('/add_ambulance_service', [MortuaryController::class, 'storeAmbulanceService'])->name('mortuary.store-ambulance-service');
+    Route::get('/edit_booking_services/{id}', [MortuaryController::class, 'editAmbulanceServiceForm'])->name('mortuary.edit-ambulance-service');
+    Route::post('/update-ambulance-service/{id}', [MortuaryController::class, 'updateAmbulanceService'])->name('mortuary.update-ambulance-service');
+    Route::get('/book-ambulance/{id}', [MortuaryController::class, 'bookAmbulanceForm'])->name('mortuary.book-ambulance');
+    Route::post('/book-ambulance', [MortuaryController::class, 'storeAmbulanceBooking'])->name('mortuary.store-ambulance-booking');
+
+    Route::get('/ambulance-bookings', [MortuaryController::class, 'ambulanceBookings'])->name('mortuary.ambulance-bookings');
+    Route::get('/view_booked_service/{id}', [MortuaryController::class, 'viewBookedService'])->name('mortuary.view_booked_service');
+
+    Route::get('/mark_complete_booked_services/{id}', [MortuaryController::class, 'markCompleteBookedServiceForm'])->name('mortuary.mark_complete_booked_services');
+    Route::post('/mark_complete_booked_services', [MortuaryController::class, 'markCompleteBookedService'])->name('mortuary.mark_complete_booked_services');
+
+    Route::get('/add_material', [MortuaryController::class, 'addMaterialForm'])->name('mortuary.add_material');
+    Route::post('/add_material', [MortuaryController::class, 'storeMaterial'])->name('mortuary.add_material');
+
+    Route::get('/edit_material_details/{id}', [MortuaryController::class, 'editMaterialDetails'])->name('mortuary.edit_material_details');
+    Route::post('/update-material', [MortuaryController::class, 'updateMaterial'])->name('mortuary.update-material');
+
+    Route::get('/item_request', [MortuaryController::class, 'viewRequestList'])->name('mortuary.item_request'); 
+    
+    Route::get('/return-request/{id}', [MortuaryController::class, 'returnRequest'])->name('mortuary.return_request');
+    Route::post('/new-request', [MortuaryController::class, 'newRequest'])->name('mortuary.new_request');
+
+
+
+
+
+
+    
+    
+   
+    Route::get('/fetch_oustanding_staff_loan/{id}', [ajaxController::class, 'Fetch_StaffLoan_balance']);
 });
 
 

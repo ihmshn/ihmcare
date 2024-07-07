@@ -7,7 +7,7 @@
 <div class="col-xl-12 col-md-12">
     <div class="ms-panel-header ms-panel-custome">
         <h6>Mortuary Price List</h6>
-        <a href="?action=add_mortuary_price_list" class="ms-text-primary">Add New Price List</a>
+        <a href="/mortuary/add_mortuary_price_list" class="ms-text-primary">Add New Price List</a>
     </div>
     <div class="ms-panel-body">
         <div class="table-responsive">
@@ -43,7 +43,10 @@
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <a href="?action=edit_price_list&&details=<?php echo e($price->id); ?>"><i class='fas fa-pencil-alt ms-text-warning'></i></a>
+                                
+                                <a href="<?php echo e(route('mortuary.edit_price_list', ['id' => $price->id])); ?>">
+                                    <i class='fas fa-pencil-alt ms-text-warning'></i>
+                                </a>
                             </td>
                         </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
